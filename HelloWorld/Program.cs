@@ -80,7 +80,6 @@ Zeilenumbruch {Stadt}";
             //Ausgabe
             Console.WriteLine($"Dein Name ist also {eingabe}.");
 
-            //Benutzereingabe (Tastendruck) hier als Programmpause, bis Benutzer einer Taste drückt
             Console.ReadKey();
 
             //Eingabe eines Strings, Umwandlung in einen Integer (Parse()-Funktion) und Abspeichern in einer Integer-Variablen
@@ -113,10 +112,10 @@ Zeilenumbruch {Stadt}";
             x = Convert.ToByte(zahl);
             Console.WriteLine(x);
 
-            //Bsp für Teilung durch 0 von Gleitkommazahlen
-            double zero = 0.0;
-            double z = 2 / zero;
-            Console.WriteLine(z);
+
+            double zero = 0;
+            double erg = 12 / zero;
+            Console.WriteLine(erg);
         }
     }
 }

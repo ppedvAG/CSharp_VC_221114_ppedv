@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M02_Grundlagen", "HelloWorl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L02_Geschwindigkeiten", "Geschwindigkeiten\L02_Geschwindigkeiten.csproj", "{0947DEB2-8924-45B1-BFB7-69615A64788E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays_Bedingungen", "Arrays_Bedingungen\Arrays_Bedingungen.csproj", "{1F0206A4-1005-484F-A535-ED20F78E2F61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0947DEB2-8924-45B1-BFB7-69615A64788E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0947DEB2-8924-45B1-BFB7-69615A64788E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0947DEB2-8924-45B1-BFB7-69615A64788E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F0206A4-1005-484F-A535-ED20F78E2F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F0206A4-1005-484F-A535-ED20F78E2F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F0206A4-1005-484F-A535-ED20F78E2F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F0206A4-1005-484F-A535-ED20F78E2F61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
