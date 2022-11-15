@@ -31,18 +31,44 @@ namespace TesteOOP
             Lebewesen kind = lebewesen1.ProduziereNachwuchs("Maria");
             #endregion
 
-            Lebewesen lebewesen;
+            #region Modul 07: Statische Member und GC
 
-            for (int i = 0; i < 100; i++)
-            {
-                lebewesen = new Lebewesen();
-                lebewesen.Name = $"LW: {i}";
-            }
+            ////Variablendklaration
+            //Lebewesen lebewesen;
 
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
+            ////Schleife zur neubelegung der Variablen (um die GarbageCOllection zu demonstrieren)
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    //Neuzuweisung der Varablen (alte Objekte werden derefernziert -> Destruktor wird ausgeführt)
+            //    lebewesen = new Lebewesen();
+            //    lebewesen.Name = $"LW{i}";
+            //}
 
-            Lebewesen.ZeigeAnzahlAllerLebewesen();
+            ////Manueller Aufruf der GC und Programmpause, bis alle Destruktoren beendet wurden
+            //GC.Collect();
+            //GC.WaitForPendingFinalizers();
+
+            ////Aufruf eines statischen Members der Person-Klasse
+            //Console.WriteLine(Lebewesen.AnzahlLebewesen);
+            //Lebewesen.ZeigeAnzahlLebewesen();
+
+            #endregion
+
+            #region Modul 08: Vererbung
+
+            //Instanziierung eines Objekts der vererbenden Klasse
+            Lebewesen lebewesen = new Lebewesen("Bello", "Fleisch", new DateTime(2007, 4, 23), 70);
+            //Instanziierung eines Objekts der abgeleiteten Klasse
+            Mensch mensch = new Mensch("Anna", "Meier", "Lasagne", new DateTime(1984, 5, 6), 189);
+            //Aufruf von Properties und Methoden, welche aus der Mutterklasse stammen
+            Console.WriteLine(mensch.Alter);
+            Console.WriteLine(mensch.Name);
+
+            //Aufruf einer Property der abgeleiteten Klasse
+            Console.WriteLine(mensch.Vorname);
+
+            #endregion
+
         }
     }
 }

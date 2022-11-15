@@ -2,41 +2,36 @@
 
 namespace Werte_VS_Referenzen
 {
-    internal class Program
+    //Klasse, deren Objekte als REFERENZTYPEN betrachtet werden
+    class PersonC
     {
-        static void Main(string[] args)
+        public int Alter { get; set; }
+        public string Name { get; set; }
+
+        public PersonC(int a, string n)
         {
-            int a = 5;
-            int b = a;
-            Console.WriteLine($"a:{a} b:{b}");
-
-            a = 10;
-            Console.WriteLine($"a:{a} b:{b}");
-
-
-            Lebewesen lb1 = new Lebewesen() { Name = "Hugo" };
-            Lebewesen lb2 = lb1;
-            Console.WriteLine($"lb1:{lb1.Name} lb2:{lb2.Name}");
-
-            lb1.Name = "Otto";
-            Console.WriteLine($"lb1:{lb1.Name} lb2:{lb2.Name}");
-
-            PersonC classPerson = new PersonC(30, "Hugo");
-            PersonS structPerson = new PersonS(30, "Anna");
-
-            Console.WriteLine($"{classPerson.Name}: {classPerson.Alter}");
-            Console.WriteLine($"{structPerson.Name}: {structPerson.Alter}");
-
-            Altern(classPerson);
-            Altern(structPerson);
-
-            Console.WriteLine($"{classPerson.Name}: {classPerson.Alter}");
-            Console.WriteLine($"{structPerson.Name}: {structPerson.Alter}");
-
-            Altern(ref structPerson);
-            Console.WriteLine($"{structPerson.Name}: {structPerson.Alter}");
+            Alter = a;
+            Name = n;
         }
+    }
 
+    //Struct, dessen Objekte, wie sämtliche Basisdatentypen, als WERTETYPEN betrachtet werden
+    struct PersonS
+    {
+        public int Alter { get; set; }
+        public string Name { get; set; }
+
+        public PersonS(int a, string n)
+        {
+            Alter = a;
+            Name = n;
+        }
+    }
+
+
+    class Program
+    {
+        //Methoden, welche jeweils die Alter-Property manipulieren
         public static void Altern(PersonC person)
         {
             person.Alter++;
@@ -47,33 +42,54 @@ namespace Werte_VS_Referenzen
             person.Alter++;
         }
 
+        //Mittels des REF-Stichworts können Werte als Referenzen an Methoden übergeben werden (s.u.)
         public static void Altern(ref PersonS person)
         {
             person.Alter++;
         }
-    }
 
-    class PersonC
-    {
-        public int Alter { get; set; }
-        public string Name { get; set; }
-
-        public PersonC(int a, string n)
+        static void Main(string[] args)
         {
-            this.Alter = a;
-            this.Name = n;
-        }
-    }
+            //Vergleich bei Neuzuweisung:
 
-    struct PersonS
-    {
-        public int Alter { get; set; }
-        public string Name { get; set; }
+            //Wertetypen:
+            int a = 5;
+            int b = a;
+            Console.WriteLine($"a:{a} b:{b}");
+            a = 10;
+            Console.WriteLine($"a:{a} b:{b}");
 
-        public PersonS(int a, string n)
-        {
-            this.Alter = a;
-            this.Name = n;
+            //Referenztypen
+            Lebewesen lb1 = new Lebewesen() { Name = "Anna" };
+            Lebewesen lb2 = lb1;
+            Console.WriteLine($"lb1:{lb1.Name} lb2:{lb2.Name}");
+            lb1.Name = "Hugo";
+            Console.WriteLine($"lb1:{lb1.Name} lb2:{lb2.Name}");
+
+
+            //Instanziierung von Bsp-Objekten
+            PersonC classP = new PersonC(30, "Anna");
+            PersonS structP = new PersonS(30, "Hugo");
+            //Ausgabe der Alter
+            Console.WriteLine($"{classP.Name}: {classP.Alter}");
+            Console.WriteLine($"{structP.Name}: {structP.Alter}");
+
+            //Übergabe des Klassenobjekts (Referenztyp):
+            ///Da bei der Übergabe die Referenz des Objektes an die Methode übergeben wird, wird innerhalb der Methode
+            ///das Alter des Objekts manipuliert. Im Ergebnis ist das Objekt nach der Methode ein Jahr älter geworden.
+            Altern(classP);
+            Console.WriteLine($"{classP.Name}: {classP.Alter}");
+
+            //Übergabe des Structobjekts (Wertetyp):
+            ///Als Wertetyp wird das Objekt bei der Übergabe an die Methode kopiert. Die Methode manipuliert nur die Kopie.
+            ///In dem Originalobjekt sind keine Veränderungen zu beobachten. Dieses Verhalten findet scih bei allen Wertetypen.
+            Altern(structP);
+            Console.WriteLine($"{structP.Name}: {structP.Alter}");
+
+            //Übergabe eines Wertetypen mittels ref
+            ///Ducrh ref wird auch bei Wertetypen die Referenz übergeben, wodurch hier eine Manipulation des Originalobjekts durchgeführt wird.
+            Altern(ref structP);
+            Console.WriteLine($"{structP.Name}: {structP.Alter}");
         }
     }
 }

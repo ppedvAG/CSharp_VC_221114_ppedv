@@ -55,14 +55,14 @@ namespace OOP_Beispiel
             this.Geburtsdatum = geburtstag;
             this.Größe = größe;
 
-            AnzahlAllerLebewesen++;
+            AnzahlLebewesen++;
         }
 
         //Es können mehrere Konstruktoren definiert werden, welche unterschiedliche Übergabeparameter haben (Überladung). Ein Konstruktor, der keine
         //Übergabeparameter hat, wird als Basiskonstruktor bezeichnet
         public Lebewesen()
         {
-            AnzahlAllerLebewesen++;
+            AnzahlLebewesen++;
         }
         #endregion
 
@@ -81,16 +81,30 @@ namespace OOP_Beispiel
 
         #endregion
 
+        #region Statische Member
+
+        //STATISCHE Variablen und Methoden hängen an der Klasse selbst und nicht an instanziierten Objekten. Sie existieren demnach unabhängig von der Anzahl
+        ///der Objekte genau einmal. Der Aufruf erfolgt über den Klassenbezeichner.
+        public static int AnzahlLebewesen { get; set; } = 0;
+
+        public static void ZeigeAnzahlLebewesen()
+        {
+            Console.WriteLine($"Es gibt {AnzahlLebewesen} Lebewesen.");
+        }
+
+        #endregion
+
+        #region Destruktor
+
+        //Der DESTRUKTOR wird von der GarbageCollection aufgerufen, wenn das Objekt nicht
+        //mehr referenziert ist. Hier können Aktionen definiert werden,
+        //welche zusätzlich zur 'Zerstörung' erfolgen sollen.
         ~Lebewesen()
         {
-            Console.WriteLine($"{this.Name} ist verstorben.");
+            Console.WriteLine($"{this.Name} ist gestorben.");
+            AnzahlLebewesen--;
         }
 
-        public static int AnzahlAllerLebewesen { get; set; } = 0;
-
-        public static void ZeigeAnzahlAllerLebewesen()
-        {
-            Console.WriteLine($"Es gib {Lebewesen.AnzahlAllerLebewesen} Lebewesen in dieser Welt.");
-        }
+        #endregion
     }
 }
