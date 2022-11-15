@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L03_Schaltjahrrechner_MiniL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M04_Schleifen_Enums", "Schleifen_Enums\M04_Schleifen_Enums.csproj", "{D9763DF2-6B1E-43BF-9023-9F0B9AB64C43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner", "Taschenrechner\Taschenrechner.csproj", "{5AFD2514-BFD6-45EC-99AC-6B297D612E63}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04f_Taschenrechner", "Taschenrechner\L04f_Taschenrechner.csproj", "{5AFD2514-BFD6-45EC-99AC-6B297D612E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Funktionen", "Funktionen\Funktionen.csproj", "{F6D31AF6-F726-4303-9777-082166423803}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M05_Funktionen", "Funktionen\M05_Funktionen.csproj", "{F6D31AF6-F726-4303-9777-082166423803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP_Beispiel", "OOP_Beispiel\OOP_Beispiel.csproj", "{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteOOP", "TesteOOP\TesteOOP.csproj", "{50479F20-0F2D-4DA2-865E-4FB55C958E8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{F6D31AF6-F726-4303-9777-082166423803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D31AF6-F726-4303-9777-082166423803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D31AF6-F726-4303-9777-082166423803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50479F20-0F2D-4DA2-865E-4FB55C958E8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50479F20-0F2D-4DA2-865E-4FB55C958E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50479F20-0F2D-4DA2-865E-4FB55C958E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50479F20-0F2D-4DA2-865E-4FB55C958E8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
