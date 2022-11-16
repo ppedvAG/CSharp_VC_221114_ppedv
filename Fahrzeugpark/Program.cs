@@ -32,20 +32,34 @@
 
             #region Lab 07: GC und statische Member
 
-            //Generierung von div. Objekten (zur Überschwemmung des RAM)
-            Fahrzeug fz1 = new Fahrzeug("BMW", 230, 25999.99);
-            for (int i = 0; i < 1000; i++)
-            {
-                fz1 = new Fahrzeug("BMW", 230, 25999.99);
-            }
+            ////Generierung von div. Objekten (zur Überschwemmung des RAM)
+            //Fahrzeug fz1 = new Fahrzeug("BMW", 230, 25999.99);
+            //for (int i = 0; i < 1000; i++)
+            //{
+            //    fz1 = new Fahrzeug("BMW", 230, 25999.99);
+            //}
 
-            //Bsp-Aufruf der GarbageCollection
-            GC.Collect();
-            //Abwarten der Finalizer-Ausführungen (der Objekte)
-            GC.WaitForPendingFinalizers();
+            ////Bsp-Aufruf der GarbageCollection
+            //GC.Collect();
+            ////Abwarten der Finalizer-Ausführungen (der Objekte)
+            //GC.WaitForPendingFinalizers();
 
-            //Aufruf der statischen Methode
-            Fahrzeug.ZeigeAnzahlAllerFahrzeuge();
+            ////Aufruf der statischen Methode
+            //Fahrzeug.ZeigeAnzahlAllerFahrzeuge();
+
+            #endregion
+
+            #region Lab 08: PKWs, Schiffe und Flugzeuge (Vererbung)
+
+            //Instanziierung verschiedener Fahrzeuge
+            PKW pkw1 = new PKW("Mercedes", 210, 23000, 5);
+            Schiff schiff1 = new Schiff("Titanic", 40, 25000000, Schiff.SchiffsTreibstoff.Dampf);
+            Flugzeug flugzeug1 = new Flugzeug("Boing", 350, 90000000, 9800);
+
+            //Ausgabe der verschiedenen Info()-Methoden
+            Console.WriteLine(pkw1.Info());
+            Console.WriteLine(schiff1.Info());
+            Console.WriteLine(flugzeug1.Info());
 
             #endregion
         }

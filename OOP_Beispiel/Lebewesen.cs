@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace OOP_Beispiel
 {
     //KLASSEN sind Vorlagen für Objekte. Sie bestimmen Eigenschaften und Funktionen dieser.
-    public class Lebewesen //zur Verwendung vgl. Program.cs
+    public abstract class Lebewesen //zur Verwendung vgl. Program.cs
     {
         #region Felder und Eigenschaften
         //FELDER (Membervariablen) sind die Variablen einzelner Objekte, welche die Zustände dieser Objekte definieren
@@ -74,9 +74,11 @@ namespace OOP_Beispiel
             this.Größe++;
         }
 
+        //Mittels VIRTUAL wird den erbenden Klassen das Überschreiben der Member mittels override erlaubt
         public virtual Lebewesen ProduziereNachwuchs(string kindname)
         {
-            return new Lebewesen(kindname, "Babynahrung", DateTime.Now, 30);
+            //return new Lebewesen(kindname, "Babynahrung", DateTime.Now, 30);
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -107,9 +109,12 @@ namespace OOP_Beispiel
 
         #endregion
 
+        //Mittels OVERRIDE können Methoden der Mutterklassen, welche mit VIRTUAL markiert sind, überschrieben werden. Bei Aufruf wird die neue Methode ausgeführt.
         public override string ToString()
         {
             return $"{this.Name} ist {this.Alter} Jahre alt und mag gerne {this.Lieblingsnahrung}.";
         }
+
+        public abstract void Essen();
     }
 }

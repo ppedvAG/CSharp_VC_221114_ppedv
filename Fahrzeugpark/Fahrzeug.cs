@@ -30,7 +30,7 @@ namespace Fahrzeugpark
         }
 
         //Methode zur Ausgabe von Objektinformationen
-        public string Info()
+        public virtual string Info()
         {
             if (this.MotorLäuft)
                 return $"{this.Name} kostet {this.Preis}€ und fährt momentan mit {this.AktGeschwindigkeit} von maximal {this.MaxGeschwindigkeit}km/h.";
@@ -83,15 +83,11 @@ namespace Fahrzeugpark
         #endregion
 
         #region Lab 07: Statische Member, Destruktor
-        //Der optionale DESTRUCTOR wird von der GaebageCollection bei Zerstörung (Speicherferigabe) des Objekts aufgerufen.
-        ~Fahrzeug()
+         ~Fahrzeug()
         {
             Console.WriteLine($"{this.Name} ist verschrottet worden.");
         }
 
-
-        //STATIC markiert statische Member. D.h. diese gelten für die Gesamtheit aller Objekte dieser Art und werden nicht für
-        //jedes Objekt einzeln erstellt.
         public static int AnzahlAllerFahrzeuge { get; private set; } = 0;
 
         public static void ZeigeAnzahlAllerFahrzeuge()
