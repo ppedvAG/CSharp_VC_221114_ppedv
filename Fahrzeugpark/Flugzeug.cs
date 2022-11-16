@@ -20,5 +20,9 @@ namespace Fahrzeugpark
         {
             return "Das Flugzeug " + base.Info() + $" Es kann bis auf {this.MaxFlughöhe}m aufsteigen.";
         }
+        public override void Hupen()
+        {
+            Console.WriteLine($"{this.Name}: 'Biep Biep'");
+        }
     }
 }

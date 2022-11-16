@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace OOP_Beispiel
 {
     //Mensch erbt mittels des :-Zeichens von der Lebewesen-Klasse und übernimmt somit alle Eigenschaften und Methoden von dieser.
-    public class Mensch : Lebewesen
+    public class Mensch : Lebewesen, IArbeitend, ICloneable
     {
         //Zusätzliche Mensch-eigene Eigenschaften
         public string Vorname { get; set; }
         public Mensch Mutter { get; set; }
+        public int Gehalt { get; set; }
+        public string Job { get; set; }
 
         //Mensch-Konstruktor, welcher per BASE-Stichwort den Konstruktor der Personklasse aufruft. Dieser erstellt dann ein Lebewesen, gibt diese
         ///an diesen Konstruktor zurück, welcher dann die zusätzlichen Eigenschaften einfügt
@@ -31,15 +33,27 @@ namespace OOP_Beispiel
             return ausgabe;
         }
 
-
         public override Lebewesen ProduziereNachwuchs(string kindname)
         {
             return new Mensch(kindname,this.Name, "Muttermilch", DateTime.Now, 30) { Mutter=this};
         }
 
+        //Durch Mutterklasse erzwungene (weil dort abstrakte) Methode
         public override void Essen()
         {
             Console.WriteLine($"{this.Vorname} konsumiert {this.Lieblingsnahrung}.");
+        }
+
+        public void Auszahlung()
+        {
+            Console.WriteLine($"{this.Vorname} {this.Name} hat {this.Gehalt}€ für {this.Job} bekommen.");
+        }
+
+        public object Clone()
+        {
+            Mensch neuerMensch = (Mensch)this.MemberwiseClone();
+            neuerMensch.Mutter = this.Mutter;
+            return neuerMensch;
         }
     }
 }
