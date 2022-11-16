@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L06f_Fahrzeugpark", "Fahrze
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M07_Werte_VS_Referenzen", "Werte_VS_Referenzen\M07_Werte_VS_Referenzen.csproj", "{8D6B7584-DAAE-443F-920B-7404C3F2CDA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerischeListen", "GenerischeListen\GenerischeListen.csproj", "{B445A3F9-C053-47CA-925F-E0B52C4B3678}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M11_GenerischeListen", "GenerischeListen\M11_GenerischeListen.csproj", "{B445A3F9-C053-47CA-925F-E0B52C4B3678}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
