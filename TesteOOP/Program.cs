@@ -67,6 +67,10 @@ namespace TesteOOP
             //Aufruf einer Property der abgeleiteten Klasse
             Console.WriteLine(mensch.Vorname);
 
+
+            Console.WriteLine(lebewesen);
+            Console.WriteLine(mensch);
+
             #endregion
 
         }

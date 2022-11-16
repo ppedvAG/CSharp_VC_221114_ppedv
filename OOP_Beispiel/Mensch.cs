@@ -10,7 +10,8 @@ namespace OOP_Beispiel
     public class Mensch : Lebewesen
     {
         //Zusätzliche Mensch-eigene Eigenschaften
-        public string Vorname { get; set; }
+        public string Vorname { get; private set; }
+        public Mensch Mutter { get; set; }
 
 
         //Mensch-Konstruktor, welcher per BASE-Stichwort den Konstruktor der Personklasse aufruft. Dieser erstellt dann ein Lebewesen, gibt diese
@@ -18,6 +19,16 @@ namespace OOP_Beispiel
         public Mensch(string vorname, string nachname, string lieblingsnahrung, DateTime geburtsdatum, int größe) : base(nachname, lieblingsnahrung, geburtsdatum, größe)
         {
             this.Vorname = vorname;
+        }
+
+        public override string ToString()
+        {
+            return $"Der Mensch {this.Vorname} " +  base.ToString();
+        }
+
+        public sealed override Lebewesen ProduziereNachwuchs(string kindname)
+        {
+            return new Mensch(kindname, this.Name, "Babynahrung", DateTime.Now, 30) { Mutter = this };
         }
     }
 }

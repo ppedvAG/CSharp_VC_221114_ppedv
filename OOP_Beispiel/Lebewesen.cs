@@ -74,7 +74,7 @@ namespace OOP_Beispiel
             this.Größe++;
         }
 
-        public Lebewesen ProduziereNachwuchs(string kindname)
+        public virtual Lebewesen ProduziereNachwuchs(string kindname)
         {
             return new Lebewesen(kindname, "Babynahrung", DateTime.Now, 30);
         }
@@ -106,5 +106,10 @@ namespace OOP_Beispiel
         }
 
         #endregion
+
+        public override string ToString()
+        {
+            return $"{this.Name} ist {this.Alter} Jahre alt und mag gerne {this.Lieblingsnahrung}.";
+        }
     }
 }
