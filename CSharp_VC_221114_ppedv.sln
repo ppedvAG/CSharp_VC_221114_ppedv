@@ -13,17 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L03_Schaltjahrrechner_MiniL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M04_Schleifen_Enums", "Schleifen_Enums\M04_Schleifen_Enums.csproj", "{D9763DF2-6B1E-43BF-9023-9F0B9AB64C43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L04f_Taschenrechner", "Taschenrechner\L04f_Taschenrechner.csproj", "{5AFD2514-BFD6-45EC-99AC-6B297D612E63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L04f_Taschenrechner", "Taschenrechner\L04f_Taschenrechner.csproj", "{5AFD2514-BFD6-45EC-99AC-6B297D612E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M05_Funktionen", "Funktionen\M05_Funktionen.csproj", "{F6D31AF6-F726-4303-9777-082166423803}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M05_Funktionen", "Funktionen\M05_Funktionen.csproj", "{F6D31AF6-F726-4303-9777-082166423803}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M06f_OOP_Beispiel", "OOP_Beispiel\M06f_OOP_Beispiel.csproj", "{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M06f_OOP_Beispiel", "OOP_Beispiel\M06f_OOP_Beispiel.csproj", "{84EEBC00-89F5-46BE-A6C6-E64B87F883CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M06f_TesteOOP", "TesteOOP\M06f_TesteOOP.csproj", "{50479F20-0F2D-4DA2-865E-4FB55C958E8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M06f_TesteOOP", "TesteOOP\M06f_TesteOOP.csproj", "{50479F20-0F2D-4DA2-865E-4FB55C958E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L06f_Fahrzeugpark", "Fahrzeugpark\L06f_Fahrzeugpark.csproj", "{65249726-8C16-468A-914E-6F00331315BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "L06f_Fahrzeugpark", "Fahrzeugpark\L06f_Fahrzeugpark.csproj", "{65249726-8C16-468A-914E-6F00331315BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M07_Werte_VS_Referenzen", "Werte_VS_Referenzen\M07_Werte_VS_Referenzen.csproj", "{8D6B7584-DAAE-443F-920B-7404C3F2CDA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M07_Werte_VS_Referenzen", "Werte_VS_Referenzen\M07_Werte_VS_Referenzen.csproj", "{8D6B7584-DAAE-443F-920B-7404C3F2CDA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerischeListen", "GenerischeListen\GenerischeListen.csproj", "{B445A3F9-C053-47CA-925F-E0B52C4B3678}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{8D6B7584-DAAE-443F-920B-7404C3F2CDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D6B7584-DAAE-443F-920B-7404C3F2CDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D6B7584-DAAE-443F-920B-7404C3F2CDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B445A3F9-C053-47CA-925F-E0B52C4B3678}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B445A3F9-C053-47CA-925F-E0B52C4B3678}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B445A3F9-C053-47CA-925F-E0B52C4B3678}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B445A3F9-C053-47CA-925F-E0B52C4B3678}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

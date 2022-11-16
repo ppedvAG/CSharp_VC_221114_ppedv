@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 namespace OOP_Beispiel
 {
     //Mensch erbt mittels des :-Zeichens von der Lebewesen-Klasse und übernimmt somit alle Eigenschaften und Methoden von dieser.
+    //Mensch implementiert Interfaces, welche dieser Klasse zusätzliche Eigenschaften verleihen
     public class Mensch : Lebewesen, IArbeitend, ICloneable
     {
         //Zusätzliche Mensch-eigene Eigenschaften
         public string Vorname { get; set; }
         public Mensch Mutter { get; set; }
-        public int Gehalt { get; set; }
+
+        //Durch IArbeitend verlangte Eigenschaften
+        public int Gehalt { get; set; } = 3500;
         public string Job { get; set; }
 
         //Mensch-Konstruktor, welcher per BASE-Stichwort den Konstruktor der Personklasse aufruft. Dieser erstellt dann ein Lebewesen, gibt diese
@@ -44,16 +47,29 @@ namespace OOP_Beispiel
             Console.WriteLine($"{this.Vorname} konsumiert {this.Lieblingsnahrung}.");
         }
 
+        //Durch IArbeitend verlangte Methode
         public void Auszahlung()
         {
             Console.WriteLine($"{this.Vorname} {this.Name} hat {this.Gehalt}€ für {this.Job} bekommen.");
         }
 
+        //Durch IClonable verlangte Methode (Bsp für .NET-eigenes Interface)
+        ///Diese Methode erlaubt die Erstellung einer Kopie dieses Objekts
         public object Clone()
         {
+            //Durch .MemberwiseClone() werden alle Wertetypen des Originalobjekts kopiert
             Mensch neuerMensch = (Mensch)this.MemberwiseClone();
+            //Referenzen müssen manuell neu zugewiesen werden oder ebenfalls über IClonable verfügen und durch .Clone() kopiert werden
             neuerMensch.Mutter = this.Mutter;
             return neuerMensch;
+        }
+
+        //Alternativ zu IClonable kann ein Kopierkonstruktor zur Dublizierung verwendet werden. Hier werden die Werte und Referenzen koiert und übertragen
+        public Mensch(Mensch alterMensch)
+        {
+            this.Vorname = alterMensch.Vorname;
+            this.Name = alterMensch.Name;
+            //...
         }
     }
 }
