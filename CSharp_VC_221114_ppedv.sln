@@ -33,9 +33,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M12_UnitTests", "UnitTests\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L12_ExceptionLab", "ExceptionLab\L12_ExceptionLab.csproj", "{81FF0440-BF0E-47E3-9CA2-31E260627A71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{C3716F30-1E77-4611-8096-D07E9671E8F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M13_Delegates", "Delegates\M13_Delegates.csproj", "{C3716F30-1E77-4611-8096-D07E9671E8F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "WinForms\WinForms.csproj", "{B6B04F3A-B783-4DC5-9ABB-99D1DAE9C135}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M14_WinForms", "WinForms\M14_WinForms.csproj", "{B6B04F3A-B783-4DC5-9ABB-99D1DAE9C135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab14_FahrzeugGUI", "FahrzeugGUI\Lab14_FahrzeugGUI.csproj", "{4696F083-D6C1-46E1-948C-1CFDB59EE537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{B6B04F3A-B783-4DC5-9ABB-99D1DAE9C135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6B04F3A-B783-4DC5-9ABB-99D1DAE9C135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6B04F3A-B783-4DC5-9ABB-99D1DAE9C135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4696F083-D6C1-46E1-948C-1CFDB59EE537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4696F083-D6C1-46E1-948C-1CFDB59EE537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4696F083-D6C1-46E1-948C-1CFDB59EE537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4696F083-D6C1-46E1-948C-1CFDB59EE537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
